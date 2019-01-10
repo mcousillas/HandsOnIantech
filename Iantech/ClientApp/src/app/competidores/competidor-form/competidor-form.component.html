@@ -1,0 +1,161 @@
+<form class="example-form" novalidate (ngSubmit)="saveCompetidor()" [formGroup]="formGroup">
+
+    <table width="100%">
+      <thead>
+        <tr>
+          <td colspan="2">ALTA COMPETIDOR</td>
+        </tr>
+      </thead>
+      <TBODY>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="ID" required class="form-control" id="id" formControlName="id">
+              <mat-error *ngIf="!formGroup.get('id').valid && formGroup.get('id').touched">
+                  Por favor ingrese un ID valido!
+              </mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Codigo" required class="form-control" id="codigo" formControlName="codigo">
+              <mat-error *ngIf="!formGroup.get('codigo').valid && formGroup.get('codigo').touched">
+                Por favor ingrese Codigo !!!
+              </mat-error>
+            </mat-form-field>
+          </td>
+
+        </tr>
+        <tr>
+
+          <td colspan="2">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Nombre" required class="form-control" id="nombre" formControlName="nombre">
+              <mat-error *ngIf="!formGroup.get('nombre').valid && formGroup.get('nombre').touched">
+                Por favor ingrese Nombre !!!
+              </mat-error>
+            </mat-form-field>
+            
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Direccion" required class="form-control" id="direccion" formControlName="direccion">
+              <mat-error *ngIf="!formGroup.get('direccion').valid && formGroup.get('direccion').touched">
+                Por favor ingrese Direccion !!!
+              </mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Latitud" required class="form-control" id="lat" formControlName="lat">
+              <mat-error *ngIf="!formGroup.get('lat').valid && formGroup.get('lat').touched">
+                Por favor ingrese Latitud !!!
+              </mat-error>
+            </mat-form-field>
+           
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Longitud" required class="form-control" id="long" formControlName="long">
+              <mat-error *ngIf="!formGroup.get('long').valid && formGroup.get('long').touched">
+                Por favor ingrese Longitud !!!
+              </mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Nombre Coorporativo" required class="form-control" id="nombreCoorporativo" formControlName="nombreCoorporativo">
+              <mat-error *ngIf="!formGroup.get('nombreCoorporativo').valid && formGroup.get('nombreCoorporativo').touched">
+                Por favor ingrese Nombre Coorporativo !!!
+              </mat-error>
+            </mat-form-field>
+           
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <select placeholder="Marcador" matNativeControl required class="form-control" id="marcador" formControlName="marcador">
+                <option value="1">Si</option>
+                <option value="2">No</option>
+              </select>
+              <mat-error *ngIf="!formGroup.get('marcador').valid && formGroup.get('marcador').touched">
+                Por favor ingrese Marcador !!!
+              </mat-error>
+            </mat-form-field>
+            
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <select placeholder="Observar" matNativeControl required class="form-control" id="observar" formControlName="observar">
+                <option value="1">Si</option>
+                <option value="2">No</option>
+              </select>
+              <mat-error *ngIf="!formGroup.get('observar').valid && formGroup.get('observar').touched">
+                Por favor ingrese Observar !!!
+              </mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <select placeholder="Marca" matNativeControl required class="form-control" id="marca" formControlName="marca">
+                <option value="1">Carrefour</option>
+                <option value="2">Carrefour Express</option>
+              </select>
+              <mat-error *ngIf="!formGroup.get('marca').valid && formGroup.get('marca').touched">
+                Por favor ingrese Marca !!!
+              </mat-error>
+            </mat-form-field>
+           
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <select placeholder="Zona de Precios" matNativeControl required class="form-control" id="zonaPrecios" formControlName="zonaPrecios">
+                <option value="1">Norte</option>
+                <option value="2">Sur</option>
+              </select>
+              <mat-error *ngIf="!formGroup.get('zonaPrecios').valid && formGroup.get('zonaPrecios').touched">
+                Por favor ingrese Zona de Precios !!!
+              </mat-error>
+            </mat-form-field>
+            
+          </td>
+        </tr>
+      </TBODY>
+    <tfoot>
+
+        <tr>
+          <td>
+            <button class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!formGroup.valid">
+              Grabar  
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="onClose()">
+              Cancelar
+            </button>
+          </td>
+
+        </tr>
+
+
+    </tfoot>
+
+
+  </table>
+
+ 
+
+</form>
